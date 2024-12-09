@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Debian Package</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'package_creator/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Debian Package</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Create Package</button>
+        </form>
+    </div>
+</body>
+</html>
